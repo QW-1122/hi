@@ -1,11 +1,5 @@
-导入请求
-从BS4导入美丽的汤
-导入时间
-导入随机
-
-#=====这里改成你的小说URL=====
 index_url="shturl.cc/PgnA1sBmlOKGZhkNmVWmA6yw"
-save_name="逆仙伐神，从一只妖开始.文本"
+save_name=“”。文本"
 #==============================
 
 标头={
@@ -29,7 +23,7 @@ text=a.get_text(条带=True)
 如果href.endswith(".html")和len(text)>2：
 chapters.append((text，href))
 
-标记(f"找到{len(章)}个章节")
+标(f"找到{len(章)}个章从句")
 如果Len(章节)>0：
 打印("前3章预览：")
 对于范围(3)中的i：
@@ -43,7 +37,7 @@ full_url=index_url.rstrip("/")+"/"+href
 print(f"第{i}/{len(chapters)}章：{title}")
         
     尝试：
-    R=请求。GET(full_url，headers=headers，timeout=10)
+    R=请求。get(full_url，headers=headers，timeout=10)
     r.encoding="utf-8"
     soup2=BeautifulSoup(r.text，"html.parser")
             
